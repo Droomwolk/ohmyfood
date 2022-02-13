@@ -1,0 +1,32 @@
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 8% 5%;
+  // width: 100%;
+  // position: fixed;
+  // bottom: 0;
+  // height: 15vh;
+  // z-index: 3;
+  &__logo {
+    width: 25%;
+    margin-bottom: 4%;
+  }
+  &__list {
+    // background-color: aqua;
+    &--icon {
+      margin-right: 0.1em;
+    }
+  }
+}
+
+li {
+  margin-bottom: 2.4%;
+}
+
+.fa-utensils {
+  margin-right: 0.8em;
+}
+
+.fa-handshake-angle {
+  margin-right: 0.5em;
+}

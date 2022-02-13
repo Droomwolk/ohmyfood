@@ -1,0 +1,61 @@
+.menu1 {
+  background-color: chartreuse;
+  position: relative;
+  width: 100%;
+  //   height: 60vh;
+  margin-bottom: 73em;
+  &__figure {
+    // width: 100%;
+    &--img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__main {
+    background-color: #f6f6f6;
+    border: 0.1em solid none;
+    border-radius: 2em 2em 0 0;
+    padding: 7% 3% 0 3%;
+    top: 13em;
+    z-index: 1;
+    width: 94%;
+    position: absolute;
+    &--title {
+      margin-bottom: 8%;
+      font-weight: bold;
+      font-size: 2em;
+    }
+    &--card {
+      &-title {
+        margin-bottom: 7%;
+      }
+      &-menu {
+        padding: 4%;
+        border: 0.1em solid none;
+        border-radius: 0.9em 0.9em 0.9em 0.9em;
+        background-color: white;
+        margin-bottom: 2em;
+        &-title {
+          font-weight: bold;
+          margin-bottom: 2%;
+        }
+        &-subtitle {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      &-menu:nth-child(3) {
+        margin: 2em 0 2em 0;
+      }
+    }
+    &--button {
+      display: flex;
+      justify-content: center;
+      padding: 1em 2em 4em 2em;
+      &-click {
+        padding: 3% 9%;
+        border-radius: 2em 2em 2em 2em;
+      }
+    }
+  }
+}

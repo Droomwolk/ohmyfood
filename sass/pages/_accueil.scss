@@ -1,0 +1,118 @@
+.accueil {
+  //   background-color: dodgerblue;
+  // height: 60vh;
+  &__reservation {
+    padding: 10%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
+    &--subtitle {
+      text-align: center;
+      font-size: 1.2em;
+    }
+    &--button {
+      background-color: darkorchid;
+      color: white;
+      margin-top: 2em;
+      padding: 1em;
+      border-radius: 1.5em 1.5em 1.5em 1.5em;
+    }
+  }
+
+  &__fonctionnement {
+    padding: 10% 4%;
+    &--title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    &--menu {
+      border: 0.1em solid #d4d1d1;
+      border-radius: 1em 1em 1em 1em;
+      padding: 8%;
+      color: "#f7f7f7";
+      background-color: #f6f6f6;
+      position: relative;
+      box-shadow: 0.2em 0.2em #d4d1d1;
+      &-number {
+        border: 0.1em solid none;
+        border-radius: 50%;
+        padding: 1%;
+        color: white;
+        background-color: blueviolet;
+        position: absolute;
+        left: -0.5em;
+        top: 1.5em;
+      }
+    }
+    &--menu:hover {
+      background-color: #f5edfe;
+    }
+    &--menu:nth-child(3) {
+      margin: 2em 0 2em 0;
+    }
+  }
+
+  .fa-mobile,
+  .fa-list,
+  .fa-mobile {
+    margin-right: 0.9em;
+    color: #7d7d7d;
+  }
+
+  &__restaurant {
+    background-color: #f7f7f7;
+    padding: 10% 4%;
+    &--title {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    &--card {
+      border: 0.1em solid none;
+      border-radius: 1em 1em;
+      width: 100%;
+      height: 250px;
+      box-sizing: border-box;
+      margin-bottom: 1.5em;
+      box-shadow: 0.2em 0.2em 0.2em #d4d1d1;
+      &-img {
+        width: 100%;
+        height: 70%;
+        border-radius: 1em 1em 0 0;
+        object-fit: cover;
+      }
+      &-image {
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+      &-description {
+        padding: 2% 3%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-titre {
+          font-weight: bold;
+          margin-bottom: 0.4em;
+        }
+      }
+    }
+  }
+}
+
+.fa-heart {
+  color: white;
+}
+
+.fa-heart:hover {
+  color: purple;
+}

@@ -1,0 +1,152 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3%;
+}
+
+.header__logo {
+  width: 50%;
+}
+
+.header__localisation {
+  background-color: #ededed;
+  text-align: center;
+  border-width: 0.1em;
+  border-style: inset;
+  padding: 3%;
+}
+
+.accueil__reservation {
+  padding: 10%;
+  background-color: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accueil__reservation--title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.accueil__reservation--subtitle {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.accueil__reservation--button {
+  background-color: darkorchid;
+  color: white;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 1.5em 1.5em 1.5em 1.5em;
+}
+
+.accueil__fonctionnement {
+  padding: 10% 4%;
+}
+
+.accueil__fonctionnement--title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.accueil__fonctionnement--menu {
+  border: 0.1em solid red;
+  border-radius: 1em 1em 1em 1em;
+  padding: 5%;
+  color: "#f7f7f7";
+}
+
+.accueil__fonctionnement--menu:hover {
+  background-color: #f7f1fe;
+}
+
+.accueil__fonctionnement--menu:nth-child(3) {
+  margin: 2em 0 2em 0;
+}
+
+.accueil__restaurant {
+  background-color: #f7f7f7;
+  padding: 10% 4%;
+}
+
+.accueil__restaurant--title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.accueil__restaurant--card {
+  border: 0.1em solid pink;
+  border-radius: 1em 1em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 1.5em;
+}
+
+.accueil__restaurant--card-img {
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+.accueil__restaurant--card-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.accueil__restaurant--card-description {
+  padding: 3% 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accueil__restaurant--card-description-titre {
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+.footer {
+  background-color: gray;
+  color: white;
+  padding: 5%;
+}
+
+.footer__logo {
+  width: 25%;
+  margin-bottom: 2%;
+}
+
+li {
+  margin-bottom: 1.5%;
+}
+/*# sourceMappingURL=main.css.map */

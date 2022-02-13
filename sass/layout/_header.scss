@@ -1,0 +1,32 @@
+.header {
+  // background-color: $color-tertiary;
+  // text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  // width: 20%;
+  height: 5vh;
+  &__link {
+    flex: 1;
+  }
+  &__logo {
+    width: 50%;
+    // padding-left: 5em;
+    flex: 1;
+    margin-right: 6em;
+  }
+  &__localisation {
+    background-color: #ededed;
+    text-align: center;
+    // border-color: coral;
+    border-width: 0.1em;
+    border-style: inset;
+    padding: 3%;
+  }
+}
+
+// .fa-arrow-left {
+//   // color: red;
+//   flex: 1;
+// }
