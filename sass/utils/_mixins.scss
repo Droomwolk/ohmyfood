@@ -1,0 +1,47 @@
+@mixin menu($position, $width, $height, $margin-bottom: 73em) {
+  position: $position;
+  width: $width;
+  height: $height;
+  margin-bottom: $margin-bottom;
+}
+
+@mixin img($width, $img) {
+  width: $width;
+  object-fit: $img;
+}
+
+@mixin main($color, $position) {
+  background-color: $color;
+  border: 0.1em solid none;
+  border-radius: 2em 2em 0 0;
+  padding: 7% 3% 0 3%;
+  top: 13em;
+  z-index: 1;
+  width: 94%;
+  position: $position;
+}
+
+@mixin title($display, $align, $justify, $margin, $width) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+  margin-bottom: $margin;
+  width: $width;
+}
+
+@mixin div($width, $color, $style, $top, $value) {
+  border-width: $width;
+  border-color: $color;
+  border-style: $style;
+  margin-top: $top;
+  width: $value;
+}
+
+@mixin cardmenu($padding, $margin: 2em) {
+  padding: $padding;
+  border: 0.1em solid none;
+  border-radius: 0.9em 0.9em 0.9em 0.9em;
+  background-color: white;
+  margin-bottom: $margin;
+  box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+}

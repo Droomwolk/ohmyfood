@@ -23,38 +23,44 @@
       color: white;
       margin-top: 2em;
       padding: 1em;
+      border: none;
       border-radius: 1.5em 1.5em 1.5em 1.5em;
     }
   }
 
   &__fonctionnement {
-    padding: 10% 4%;
+    padding: 10% 6%;
     &--title {
       font-weight: bold;
       font-size: 1.5em;
       margin-bottom: 1em;
     }
     &--menu {
-      border: 0.1em solid #d4d1d1;
-      border-radius: 1em 1em 1em 1em;
+      width: 85%;
+      border: 0.1em none #d4d1d1;
+      border-radius: 1.5em 1.5em 1.5em 1.5em;
       padding: 8%;
       color: "#f7f7f7";
       background-color: #f6f6f6;
       position: relative;
-      box-shadow: 0.2em 0.2em #d4d1d1;
+      // box-shadow: 0.2em 0.2em #d4d1d1;
+      box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
       &-number {
         border: 0.1em solid none;
         border-radius: 50%;
-        padding: 1%;
+        padding: 2%;
         color: white;
         background-color: blueviolet;
         position: absolute;
         left: -0.5em;
-        top: 1.5em;
+        top: 1.3em;
       }
     }
     &--menu:hover {
       background-color: #f5edfe;
+      i {
+        color: $color-primary;
+      }
     }
     &--menu:nth-child(3) {
       margin: 2em 0 2em 0;
@@ -63,7 +69,7 @@
 
   .fa-mobile,
   .fa-list,
-  .fa-mobile {
+  .fa-store {
     margin-right: 0.9em;
     color: #7d7d7d;
   }
@@ -80,10 +86,11 @@
       border: 0.1em solid none;
       border-radius: 1em 1em;
       width: 100%;
-      height: 250px;
+      height: 260px;
       box-sizing: border-box;
       margin-bottom: 1.5em;
-      box-shadow: 0.2em 0.2em 0.2em #d4d1d1;
+      box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+      position: relative;
       &-img {
         width: 100%;
         height: 70%;
@@ -103,7 +110,21 @@
         &-titre {
           font-weight: bold;
           margin-bottom: 0.4em;
+          color: black;
         }
+        &-text {
+          color: black;
+          font-style: normal;
+        }
+      }
+      &-nouveau {
+        border: 0.1em solid none;
+        background-color: $color-tertiary;
+        color: green;
+        padding: 1.5%;
+        position: absolute;
+        top: 1em;
+        left: 17.5em;
       }
     }
   }
@@ -115,4 +136,8 @@
 
 .fa-heart:hover {
   color: purple;
+}
+
+a {
+  text-decoration: none;
 }

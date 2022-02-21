@@ -1,6 +1,11 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./components/button";
 @import "./layout/header";
 @import "./layout/main";
-@import "./pages/accueil";
 @import "./layout/footer";
+@import "./pages/accueil";
 @import "./pages/français";
+@import "./pages/delice";
+@import "./pages/noteEnchante";
+@import "./pages/palette";

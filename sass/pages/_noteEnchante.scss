@@ -1,9 +1,9 @@
-.menu1 {
+.menu2 {
   // position: relative;
   // width: 100%;
-  // height: 43vh;
+  // height: 55vh;
   // margin-bottom: 73em;
-  @include menu($relative, 100%, 43vh);
+  @include menu($relative, 100%, 55vh);
   &__figure {
     &--img {
       // width: 100%;
@@ -63,7 +63,7 @@
           display: flex;
           justify-content: space-between;
           &-prix {
-            font-weight: bolder;
+            font-weight: bold;
           }
         }
       }
