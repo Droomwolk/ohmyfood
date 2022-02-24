@@ -37,11 +37,63 @@
   width: $value;
 }
 
-@mixin cardmenu($padding, $margin: 2em) {
+@mixin cardmenu($padding, $radius, $color, $margin: 2em, $dure) {
   padding: $padding;
   border: 0.1em solid none;
-  border-radius: 0.9em 0.9em 0.9em 0.9em;
-  background-color: white;
+  border-radius: $radius;
+  background-color: $color;
   margin-bottom: $margin;
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  opacity: 0;
+  animation: card-display $dure forwards ease-in-out;
+  transform-origin: bottom;
+  position: relative;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    .menu1__main--card-menu-subtitle-prix {
+      margin-right: 50px;
+    }
+    .menu1__main--card-menu-animation {
+      transform: translateX(-100%);
+    }
+    .fa-check-circle {
+      animation: check-round 600ms 400ms;
+    }
+  }
+}
+
+@mixin animation($color, $background, $position, $dure) {
+  color: $color;
+  background-color: $background;
+  width: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: $position;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  margin-right: -60px;
+  transition: transform $dure ease-in-out;
+}
+
+@mixin text($flex, $width, $height, $overflow) {
+  flex: $flex;
+  width: $width;
+  height: $height;
+  overflow: $overflow;
+}
+
+@mixin price($weight, $color, $dure) {
+  font-weight: $weight;
+  width: 50px;
+  height: auto;
+  background-color: $color;
+  align-self: flex-end;
+  // @include bloc-background($color-neutral);
+  transition: margin-right $dure ease-in-out;
 }

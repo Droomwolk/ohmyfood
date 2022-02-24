@@ -54,17 +54,36 @@
         // background-color: white;
         // margin-bottom: 2em;
         // box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
-        @include cardmenu(4%, 2em);
+        @include cardmenu(
+          4%,
+          $borderRadiusMenu,
+          $color-background,
+          2em,
+          $animDure
+        );
         &-title {
           font-weight: bold;
           margin-bottom: 2%;
         }
         &-subtitle {
           display: flex;
+          overflow: hidden;
           justify-content: space-between;
+          // &-text {
+          //   @include text(1, 70%, auto, hidden);
+          // }
           &-prix {
-            font-weight: bolder;
+            // font-weight: bolder;
+            @include price(bolder, $color-background, 1000ms);
           }
+        }
+        &-animation {
+          @include animation(
+            $color-background,
+            $color-tertiary,
+            $absolute,
+            $animDure
+          );
         }
       }
       &-menu:nth-child(3) {

@@ -1,3 +1,19 @@
+@keyframes card-display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check-round {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .btn-grad {
   background-image: linear-gradient(to right, #ff79da 0%, #9356dc 51%, #ff79da 100%);
 }
@@ -266,9 +282,24 @@ a {
   padding: 4%;
   border: 0.1em solid none;
   border-radius: 0.9em 0.9em 0.9em 0.9em;
-  background-color: white;
+  background-color: #f6f6f6;
   margin-bottom: 2em;
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  opacity: 0;
+  animation: card-display 1000ms forwards ease-in-out;
+  transform-origin: bottom;
+  position: relative;
+  cursor: pointer;
+}
+.menu1__main--card-menu:hover .menu1__main--card-menu-subtitle-prix, .menu1__main--card-menu:active .menu1__main--card-menu-subtitle-prix {
+  margin-right: 50px;
+}
+.menu1__main--card-menu:hover .menu1__main--card-menu-animation, .menu1__main--card-menu:active .menu1__main--card-menu-animation {
+  transform: translateX(-100%);
+}
+.menu1__main--card-menu:hover .fa-check-circle, .menu1__main--card-menu:active .fa-check-circle {
+  animation: check-round 600ms 400ms;
 }
 .menu1__main--card-menu-title {
   font-weight: bold;
@@ -276,10 +307,32 @@ a {
 }
 .menu1__main--card-menu-subtitle {
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
 }
 .menu1__main--card-menu-subtitle-prix {
   font-weight: bolder;
+  width: 50px;
+  height: auto;
+  background-color: #f6f6f6;
+  align-self: flex-end;
+  transition: margin-right 1000ms ease-in-out;
+}
+.menu1__main--card-menu-animation {
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  width: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  margin-right: -60px;
+  transition: transform 1000ms ease-in-out;
 }
 .menu1__main--card-menu:nth-child(3) {
   margin: 2em 0 2em 0;
@@ -344,9 +397,24 @@ a {
   padding: 4%;
   border: 0.1em solid none;
   border-radius: 0.9em 0.9em 0.9em 0.9em;
-  background-color: white;
+  background-color: #f6f6f6;
   margin-bottom: 2em;
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  opacity: 0;
+  animation: card-display 1000ms forwards ease-in-out;
+  transform-origin: bottom;
+  position: relative;
+  cursor: pointer;
+}
+.menu4__main--card-menu:hover .menu1__main--card-menu-subtitle-prix, .menu4__main--card-menu:active .menu1__main--card-menu-subtitle-prix {
+  margin-right: 50px;
+}
+.menu4__main--card-menu:hover .menu1__main--card-menu-animation, .menu4__main--card-menu:active .menu1__main--card-menu-animation {
+  transform: translateX(-100%);
+}
+.menu4__main--card-menu:hover .fa-check-circle, .menu4__main--card-menu:active .fa-check-circle {
+  animation: check-round 600ms 400ms;
 }
 .menu4__main--card-menu-title {
   font-weight: bold;
@@ -355,9 +423,31 @@ a {
 .menu4__main--card-menu-subtitle {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu4__main--card-menu-subtitle-prix {
-  font-weight: bold;
+  font-weight: bolder;
+  width: 50px;
+  height: auto;
+  background-color: #f6f6f6;
+  align-self: flex-end;
+  transition: margin-right 1000ms ease-in-out;
+}
+.menu4__main--card-menu-animation {
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  width: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  margin-right: -60px;
+  transition: transform 1000ms ease-in-out;
 }
 .menu4__main--card-menu:nth-child(3) {
   margin: 2em 0 2em 0;
@@ -421,9 +511,24 @@ a {
   padding: 4%;
   border: 0.1em solid none;
   border-radius: 0.9em 0.9em 0.9em 0.9em;
-  background-color: white;
+  background-color: #f6f6f6;
   margin-bottom: 2em;
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  opacity: 0;
+  animation: card-display 1000ms forwards ease-in-out;
+  transform-origin: bottom;
+  position: relative;
+  cursor: pointer;
+}
+.menu2__main--card-menu:hover .menu1__main--card-menu-subtitle-prix, .menu2__main--card-menu:active .menu1__main--card-menu-subtitle-prix {
+  margin-right: 50px;
+}
+.menu2__main--card-menu:hover .menu1__main--card-menu-animation, .menu2__main--card-menu:active .menu1__main--card-menu-animation {
+  transform: translateX(-100%);
+}
+.menu2__main--card-menu:hover .fa-check-circle, .menu2__main--card-menu:active .fa-check-circle {
+  animation: check-round 600ms 400ms;
 }
 .menu2__main--card-menu-title {
   font-weight: bold;
@@ -431,10 +536,32 @@ a {
 }
 .menu2__main--card-menu-subtitle {
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
 }
 .menu2__main--card-menu-subtitle-prix {
-  font-weight: bold;
+  font-weight: bolder;
+  width: 50px;
+  height: auto;
+  background-color: #f6f6f6;
+  align-self: flex-end;
+  transition: margin-right 1000ms ease-in-out;
+}
+.menu2__main--card-menu-animation {
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  width: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  margin-right: -60px;
+  transition: transform 1000ms ease-in-out;
 }
 .menu2__main--card-menu:nth-child(3) {
   margin: 2em 0 2em 0;
@@ -499,9 +626,24 @@ a {
   padding: 4%;
   border: 0.1em solid none;
   border-radius: 0.9em 0.9em 0.9em 0.9em;
-  background-color: white;
+  background-color: #f6f6f6;
   margin-bottom: 2em;
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  opacity: 0;
+  animation: card-display 1000ms forwards ease-in-out;
+  transform-origin: bottom;
+  position: relative;
+  cursor: pointer;
+}
+.menu3__main--card-menu:hover .menu1__main--card-menu-subtitle-prix, .menu3__main--card-menu:active .menu1__main--card-menu-subtitle-prix {
+  margin-right: 50px;
+}
+.menu3__main--card-menu:hover .menu1__main--card-menu-animation, .menu3__main--card-menu:active .menu1__main--card-menu-animation {
+  transform: translateX(-100%);
+}
+.menu3__main--card-menu:hover .fa-check-circle, .menu3__main--card-menu:active .fa-check-circle {
+  animation: check-round 600ms 400ms;
 }
 .menu3__main--card-menu-title {
   font-weight: bold;
@@ -512,7 +654,28 @@ a {
   justify-content: space-between;
 }
 .menu3__main--card-menu-subtitle-prix {
-  font-weight: bold;
+  font-weight: bolder;
+  width: 50px;
+  height: auto;
+  background-color: #f6f6f6;
+  align-self: flex-end;
+  transition: margin-right 1000ms ease-in-out;
+}
+.menu3__main--card-menu-animation {
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  width: 60px;
+  text-align: center;
+  padding-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  margin-right: -60px;
+  transition: transform 1000ms ease-in-out;
 }
 .menu3__main--card-menu:nth-child(3) {
   margin: 2em 0 2em 0;
