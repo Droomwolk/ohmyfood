@@ -1,4 +1,4 @@
-@mixin menu($position, $width, $height, $margin-bottom: 73em) {
+@mixin menu($position, $width, $height, $margin-bottom) {
   position: $position;
   width: $width;
   height: $height;
@@ -52,10 +52,16 @@
   cursor: pointer;
   &:hover,
   &:active {
-    .menu1__main--card-menu-subtitle-prix {
-      margin-right: 50px;
+    .menu__main--card-menu-subtitle {
+      // overflow: hidden;
     }
-    .menu1__main--card-menu-animation {
+    .menu__main--card-menu-subtitle-text {
+      text-overflow: ellipsis;
+    }
+    .menu__main--card-menu-subtitle-prix {
+      margin-right: 30px;
+    }
+    .menu__main--card-menu-animation {
       transform: translateX(-100%);
     }
     .fa-check-circle {
@@ -96,4 +102,13 @@
   align-self: flex-end;
   // @include bloc-background($color-neutral);
   transition: margin-right $dure ease-in-out;
+}
+
+@mixin circle($position, $top, $left, $width, $height, $borderRadius) {
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
 }
