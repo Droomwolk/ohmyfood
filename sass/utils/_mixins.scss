@@ -53,13 +53,19 @@
   &:hover,
   &:active {
     .menu__main--card-menu-subtitle {
-      // overflow: hidden;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .menu__main--card-menu-subtitle-text {
       text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .menu__main--card-menu-subtitle-prix {
       margin-right: 30px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .menu__main--card-menu-animation {
       transform: translateX(-100%);
@@ -111,4 +117,198 @@
   width: $width;
   height: $height;
   border-radius: $borderRadius;
+}
+
+// @mixin heart {
+//   height: 12px;
+//   width: 12px;
+//   position: absolute;
+//   transform: rotate(45deg);
+// }
+
+// @mixin heart-rounds {
+//   content: "";
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 50%;
+//   position: absolute;
+// }
+
+//Apparition
+@mixin divAnimation {
+  @for $i from 1 through 5 {
+    & .menu__main--card-menu:nth-child(#{$i}) {
+      animation-delay: calc($animDure / 4) * $i;
+    }
+  }
+}
+
+//Animation Heart
+
+@mixin animationHeart($height, $width, $position, $rotate, $top, $right) {
+  height: $height;
+  width: $width;
+  position: $position;
+  transform: rotate($rotate);
+  opacity: 1;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  top: $top;
+  right: $right;
+  z-index: 3;
+  transition: opacity $animDure;
+  cursor: pointer;
+  &::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 2px solid black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 30%;
+    border-bottom: none;
+    top: -9px;
+    left: 0px;
+    z-index: 3;
+  }
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 2px solid black;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 30%;
+    border-right: none;
+    right: 9px;
+    top: 0px;
+    z-index: 3;
+  }
+  &:hover,
+  &:active {
+    opacity: 0;
+    + .like__bg {
+      animation: heart-fill 1500ms forwards ease-in;
+    }
+  }
+}
+
+//Apparition
+
+@mixin apparitionHeart($height, $width, $position, $rotate) {
+  height: $height;
+  width: $width;
+  position: $position;
+  transform: rotate($rotate);
+  opacity: 0;
+  z-index: 1;
+  top: 38px;
+  right: 25px;
+  background: radial-gradient($color-primary, $color-secondary);
+  &::before {
+    background: linear-gradient($color-primary, 80%, $color-secondary);
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+  }
+  &::after {
+    background: linear-gradient(80deg, $color-primary, 80%, $color-secondary);
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+  }
+}
+
+@mixin heartAnim {
+  .like {
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 1;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    top: 38px;
+    right: 25px;
+    z-index: 3;
+    transition: opacity $animDure;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border: 2px solid black;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 30%;
+      border-bottom: none;
+      top: -9px;
+      left: 0px;
+      z-index: 3;
+    }
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border: 2px solid black;
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 30%;
+      border-right: none;
+      right: 9px;
+      top: 0px;
+      z-index: 3;
+    }
+    &:hover,
+    &:active {
+      opacity: 0;
+      + .like__bg {
+        animation: heart-fill 1500ms forwards ease-in;
+      }
+    }
+    &__bg {
+      height: 12px;
+      width: 12px;
+      position: absolute;
+      transform: rotate(45deg);
+      opacity: 0;
+      z-index: 1;
+      top: 38px;
+      right: 25px;
+      background: radial-gradient($color-primary, $color-secondary);
+      &::before {
+        background: linear-gradient($color-primary, 80%, $color-secondary);
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        left: -8px;
+      }
+      &::after {
+        background: linear-gradient(
+          80deg,
+          $color-primary,
+          80%,
+          $color-secondary
+        );
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: -8px;
+      }
+    }
+  }
 }

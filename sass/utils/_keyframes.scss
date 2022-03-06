@@ -52,3 +52,16 @@
     opacity: 1;
   }
 }
+
+@keyframes heart-fill {
+  0% {
+    transform: scale(0.5) rotate(45deg);
+    transform-origin: 45% bottom;
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+    // transform-origin: 100%;
+    opacity: 1;
+  }
+}
