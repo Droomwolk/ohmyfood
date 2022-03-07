@@ -32,9 +32,6 @@
         font-weight: bold;
         font-size: 2em;
       }
-      &-heart {
-        @include heartAnim;
-      }
     }
     &--card {
       margin-top: 10%;

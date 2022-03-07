@@ -7,12 +7,24 @@
     font-weight: bold;
     font-style: oblique;
     margin-bottom: 6%;
+    font-family: $shrikhand;
   }
   &__list {
     &--link {
       text-decoration: none;
       color: white;
       cursor: pointer;
+    }
+    // @media all and (min-width: 768px) {
+    //   display: flex;
+    //   justify-content: space-between;
+    // }
+  }
+  @media all and (min-width: 768px) {
+    padding: 3% 5%;
+    &__list {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

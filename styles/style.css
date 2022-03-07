@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 @keyframes card-display {
   0% {
     opacity: 0;
@@ -59,6 +60,84 @@
     opacity: 1;
   }
 }
+.like {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  transform: rotate(45deg);
+  opacity: 1;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  top: 38px;
+  right: 25px;
+  z-index: 3;
+  transition: opacity 1000ms;
+  cursor: pointer;
+}
+.like::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 2px solid black;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 30%;
+  border-bottom: none;
+  top: -9px;
+  left: 0px;
+  z-index: 3;
+}
+.like::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border: 2px solid black;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 30%;
+  border-right: none;
+  right: 9px;
+  top: 0px;
+  z-index: 3;
+}
+.like:hover, .like:active {
+  opacity: 0;
+}
+.like:hover + .like__bg, .like:active + .like__bg {
+  animation: heart-fill 1500ms forwards ease-in;
+}
+.like__bg {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  transform: rotate(45deg);
+  opacity: 0;
+  z-index: 1;
+  top: 38px;
+  right: 25px;
+  background: radial-gradient(#9356dc, #ff79da);
+}
+.like__bg::before {
+  background: linear-gradient(#9356dc, 80%, #ff79da);
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+}
+.like__bg::after {
+  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+}
+
 .btn-grad {
   background-image: linear-gradient(to right, #ff79da 0%, #9356dc 51%, #ff79da 100%);
 }
@@ -174,6 +253,26 @@
   margin-left: 1em;
 }
 
+.headerBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+  width: 70%;
+  height: 5vh;
+}
+.headerBanner__logo {
+  height: 2em;
+  padding-left: 6em;
+  flex: 1;
+}
+@media all and (min-width: 768px) {
+  .headerBanner__logo {
+    height: 5em;
+    padding-left: 20em;
+  }
+}
+
 .footer {
   background-color: #353535;
   color: white;
@@ -184,11 +283,21 @@
   font-weight: bold;
   font-style: oblique;
   margin-bottom: 6%;
+  font-family: "Shrikhand", cursive;
 }
 .footer__list--link {
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+@media all and (min-width: 768px) {
+  .footer {
+    padding: 3% 5%;
+  }
+  .footer__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 li {
@@ -229,6 +338,11 @@ li {
   border: none;
   border-radius: 1.5em 1.5em 1.5em 1.5em;
 }
+@media all and (min-width: 768px) {
+  .accueil__reservation {
+    padding: 5%;
+  }
+}
 .accueil__fonctionnement {
   padding: 10% 6%;
 }
@@ -266,6 +380,22 @@ li {
 .accueil__fonctionnement--menu:nth-child(3) {
   margin: 2em 0 2em 0;
 }
+@media all and (min-width: 768px) {
+  .accueil__fonctionnement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2% 6%;
+  }
+  .accueil__fonctionnement--menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 3%;
+  }
+}
 .accueil .fa-mobile,
 .accueil .fa-list,
 .accueil .fa-store {
@@ -275,13 +405,14 @@ li {
 .accueil__restaurant {
   background-color: #f7f7f7;
   padding: 10% 4%;
+  font-family: "Roboto", sans-serif;
 }
 .accueil__restaurant--title {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
 }
-.accueil__restaurant--card {
+.accueil__restaurant--section-card {
   border: 0.1em solid none;
   border-radius: 1em 1em;
   width: 100%;
@@ -291,33 +422,33 @@ li {
   box-shadow: 10px 11px 19px -7px rgba(0, 0, 0, 0.16);
   position: relative;
 }
-.accueil__restaurant--card-img {
+.accueil__restaurant--section-card-img {
   width: 100%;
   height: 70%;
   border-radius: 1em 1em 0 0;
   object-fit: cover;
 }
-.accueil__restaurant--card-image {
+.accueil__restaurant--section-card-image {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
 }
-.accueil__restaurant--card-description {
+.accueil__restaurant--section-card-description {
   padding: 2% 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.accueil__restaurant--card-description-titre {
+.accueil__restaurant--section-card-description-titre {
   font-weight: bold;
   margin-bottom: 0.4em;
   color: black;
 }
-.accueil__restaurant--card-description-text {
+.accueil__restaurant--section-card-description-text {
   color: black;
   font-style: normal;
 }
-.accueil__restaurant--card-nouveau {
+.accueil__restaurant--section-card-nouveau {
   border: 0.1em solid none;
   background-color: #99e2d0;
   color: green;
@@ -325,6 +456,21 @@ li {
   position: absolute;
   top: 1em;
   left: 17.5em;
+}
+@media all and (min-width: 768px) {
+  .accueil__restaurant {
+    padding: 2% 4%;
+  }
+  .accueil__restaurant--section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .accueil__restaurant--section-card {
+    margin-right: 1em;
+  }
+  .accueil__restaurant--section-card-nouveau {
+    left: 14em;
+  }
 }
 
 .fa-heart {
@@ -365,87 +511,11 @@ a {
   justify-content: space-between;
   margin-bottom: 8%;
   width: 95%;
+  font-family: "Shrikhand", cursive;
 }
 .menu__main--title-titre {
   font-weight: bold;
   font-size: 2em;
-}
-.menu__main--title-heart .like {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 1;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  top: 38px;
-  right: 25px;
-  z-index: 3;
-  transition: opacity 1000ms;
-  cursor: pointer;
-}
-.menu__main--title-heart .like::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 30%;
-  border-bottom: none;
-  top: -9px;
-  left: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 30%;
-  border-right: none;
-  right: 9px;
-  top: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like:hover, .menu__main--title-heart .like:active {
-  opacity: 0;
-}
-.menu__main--title-heart .like:hover + .like__bg, .menu__main--title-heart .like:active + .like__bg {
-  animation: heart-fill 1500ms forwards ease-in;
-}
-.menu__main--title-heart .like__bg {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0;
-  z-index: 1;
-  top: 38px;
-  right: 25px;
-  background: radial-gradient(#9356dc, #ff79da);
-}
-.menu__main--title-heart .like__bg::before {
-  background: linear-gradient(#9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  left: -8px;
-}
-.menu__main--title-heart .like__bg::after {
-  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
 }
 .menu__main--card {
   margin-top: 10%;
@@ -558,84 +628,6 @@ a {
   border-radius: 2em 2em 2em 2em;
 }
 
-.like {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 1;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  top: 38px;
-  right: 25px;
-  z-index: 3;
-  transition: opacity 1000ms;
-  cursor: pointer;
-}
-.like::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 30%;
-  border-bottom: none;
-  top: -9px;
-  left: 0px;
-  z-index: 3;
-}
-.like::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 30%;
-  border-right: none;
-  right: 9px;
-  top: 0px;
-  z-index: 3;
-}
-.like:hover, .like:active {
-  opacity: 0;
-}
-.like:hover + .like__bg, .like:active + .like__bg {
-  animation: heart-fill 1500ms forwards ease-in;
-}
-.like__bg {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0;
-  z-index: 1;
-  top: 38px;
-  right: 25px;
-  background: radial-gradient(#9356dc, #ff79da);
-}
-.like__bg::before {
-  background: linear-gradient(#9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  left: -8px;
-}
-.like__bg::after {
-  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
-}
-
 .menu {
   position: relative;
   width: 100%;
@@ -662,90 +654,15 @@ a {
   justify-content: space-between;
   margin-bottom: 8%;
   width: 95%;
+  font-family: "Shrikhand", cursive;
 }
 .menu__main--title-titre {
   font-weight: bold;
   font-size: 2em;
 }
-.menu__main--title-heart .like {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 1;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  top: 38px;
-  right: 25px;
-  z-index: 3;
-  transition: opacity 1000ms;
-  cursor: pointer;
-}
-.menu__main--title-heart .like::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 30%;
-  border-bottom: none;
-  top: -9px;
-  left: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 30%;
-  border-right: none;
-  right: 9px;
-  top: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like:hover, .menu__main--title-heart .like:active {
-  opacity: 0;
-}
-.menu__main--title-heart .like:hover + .like__bg, .menu__main--title-heart .like:active + .like__bg {
-  animation: heart-fill 1500ms forwards ease-in;
-}
-.menu__main--title-heart .like__bg {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0;
-  z-index: 1;
-  top: 38px;
-  right: 25px;
-  background: radial-gradient(#9356dc, #ff79da);
-}
-.menu__main--title-heart .like__bg::before {
-  background: linear-gradient(#9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  left: -8px;
-}
-.menu__main--title-heart .like__bg::after {
-  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
-}
 .menu__main--card {
   margin-top: 10%;
+  font-family: "Roboto", sans-serif;
 }
 .menu__main--card-title {
   font-size: larger;
@@ -865,87 +782,11 @@ a {
   justify-content: space-between;
   margin-bottom: 8%;
   width: 95%;
+  font-family: "Shrikhand", cursive;
 }
 .menu__main--title-titre {
   font-weight: bold;
   font-size: 2em;
-}
-.menu__main--title-heart .like {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 1;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  top: 38px;
-  right: 25px;
-  z-index: 3;
-  transition: opacity 1000ms;
-  cursor: pointer;
-}
-.menu__main--title-heart .like::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 30%;
-  border-bottom: none;
-  top: -9px;
-  left: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 30%;
-  border-right: none;
-  right: 9px;
-  top: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like:hover, .menu__main--title-heart .like:active {
-  opacity: 0;
-}
-.menu__main--title-heart .like:hover + .like__bg, .menu__main--title-heart .like:active + .like__bg {
-  animation: heart-fill 1500ms forwards ease-in;
-}
-.menu__main--title-heart .like__bg {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0;
-  z-index: 1;
-  top: 38px;
-  right: 25px;
-  background: radial-gradient(#9356dc, #ff79da);
-}
-.menu__main--title-heart .like__bg::before {
-  background: linear-gradient(#9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  left: -8px;
-}
-.menu__main--title-heart .like__bg::after {
-  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
 }
 .menu__main--card {
   margin-top: 10%;
@@ -1069,87 +910,11 @@ a {
   justify-content: space-between;
   margin-bottom: 8%;
   width: 95%;
+  font-family: "Shrikhand", cursive;
 }
 .menu__main--title-titre {
   font-weight: bold;
   font-size: 2em;
-}
-.menu__main--title-heart .like {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 1;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  top: 38px;
-  right: 25px;
-  z-index: 3;
-  transition: opacity 1000ms;
-  cursor: pointer;
-}
-.menu__main--title-heart .like::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 30%;
-  border-bottom: none;
-  top: -9px;
-  left: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border: 2px solid black;
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 30%;
-  border-right: none;
-  right: 9px;
-  top: 0px;
-  z-index: 3;
-}
-.menu__main--title-heart .like:hover, .menu__main--title-heart .like:active {
-  opacity: 0;
-}
-.menu__main--title-heart .like:hover + .like__bg, .menu__main--title-heart .like:active + .like__bg {
-  animation: heart-fill 1500ms forwards ease-in;
-}
-.menu__main--title-heart .like__bg {
-  height: 12px;
-  width: 12px;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0;
-  z-index: 1;
-  top: 38px;
-  right: 25px;
-  background: radial-gradient(#9356dc, #ff79da);
-}
-.menu__main--title-heart .like__bg::before {
-  background: linear-gradient(#9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  left: -8px;
-}
-.menu__main--title-heart .like__bg::after {
-  background: linear-gradient(80deg, #9356dc, 80%, #ff79da);
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
 }
 .menu__main--card {
   margin-top: 10%;
