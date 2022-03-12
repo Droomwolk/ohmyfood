@@ -26,6 +26,14 @@
       margin-left: 1em;
     }
   }
+  @media all and (min-width: 768px) {
+    height: 4vh;
+    &__logo {
+      height: 4em;
+      // padding-left: 1em;
+      margin-right: 30em;
+    }
+  }
 }
 
 .headerBanner {

@@ -1,4 +1,4 @@
-.menu {
+.menu3 {
   @include menu($relative, 100%, 43vh, 73em);
   &__figure {
     &--img {
@@ -17,6 +17,7 @@
     &--card {
       margin-top: 10%;
       font-family: $roboto;
+      @include divAnimation;
       &-title {
         font-size: larger;
         margin-bottom: 2%;
@@ -64,6 +65,45 @@
       &-click {
         padding: 3% 9%;
         border-radius: 2em 2em 2em 2em;
+      }
+    }
+  }
+  @media all and (min-width: 768px) {
+    height: 5vh;
+    width: 100%;
+    top: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 123.5em;
+    &__figure {
+      height: 20vh;
+      width: 100%;
+      &--img {
+        height: 20em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__main {
+      width: 60%;
+      &--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-icones {
+          position: relative;
+          left: 29em;
+          bottom: 3.7em;
+        }
+      }
+      &--card {
+        &-menu {
+          padding: 2%;
+        }
       }
     }
   }
