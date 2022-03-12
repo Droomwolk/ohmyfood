@@ -5,7 +5,6 @@
         "main.scss",
         "utils/_variables.scss",
         "layout/_header.scss",
-        "layout/_main.scss",
         "pages/_accueil.scss",
         "layout/_footer.scss"
     ],

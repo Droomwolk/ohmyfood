@@ -1,5 +1,5 @@
 .menu2 {
-  @include menu($relative, 100%, 43vh, 73em);
+  @include menu($relative, 100%, 44vh, 73em);
   &__figure {
     &--img {
       @include img(100%, cover);
@@ -16,6 +16,8 @@
     }
     &--card {
       margin-top: 10%;
+      font-family: $roboto;
+      @include divAnimation(2);
       &-title {
         font-size: larger;
         margin-bottom: 2%;
@@ -29,7 +31,8 @@
           $borderRadiusMenu,
           $color-background,
           2em,
-          $animDure
+          $animDure,
+          2
         );
         &-title {
           font-weight: bold;
@@ -67,7 +70,7 @@
     }
   }
   @media all and (min-width: 768px) {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -92,8 +95,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        &-titre {
-        }
         &-icones {
           position: relative;
           left: 29em;
@@ -101,8 +102,17 @@
         }
       }
       &--card {
+        @include divAnimation(2);
         &-menu {
           padding: 2%;
+        }
+        &-animation {
+          @include animation(
+            $color-background,
+            $color-tertiary,
+            $absolute,
+            $animDure
+          );
         }
       }
     }

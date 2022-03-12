@@ -38,7 +38,7 @@
   width: $value;
 }
 
-@mixin cardmenu($padding, $radius, $color, $margin: 2em, $dure) {
+@mixin cardmenu($padding, $radius, $color, $margin: 2em, $dure, $name) {
   padding: $padding;
   border: 0.1em solid none;
   border-radius: $radius;
@@ -53,22 +53,22 @@
   cursor: pointer;
   &:hover,
   &:active {
-    .menu__main--card-menu-subtitle {
+    .menu#{$name}__main--card-menu-subtitle {
       white-space: nowrap;
       overflow: hidden;
     }
-    .menu__main--card-menu-subtitle-text {
+    .menu#{$name}__main--card-menu-subtitle-text {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
-    .menu__main--card-menu-subtitle-prix {
+    .menu#{$name}__main--card-menu-subtitle-prix {
       margin-right: 30px;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
     }
-    .menu__main--card-menu-animation {
+    .menu#{$name}__main--card-menu-animation {
       transform: translateX(-100%);
     }
     .fa-check-circle {
@@ -120,9 +120,9 @@
 }
 
 //Apparition
-@mixin divAnimation {
+@mixin divAnimation($name) {
   @for $i from 1 through 5 {
-    & .menu__main--card-menu:nth-child(#{$i}) {
+    & .menu#{$name}__main--card-menu:nth-child(#{$i}) {
       animation-delay: calc($animDure / 4) * $i;
     }
   }

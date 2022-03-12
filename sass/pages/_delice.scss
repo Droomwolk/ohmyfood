@@ -17,7 +17,7 @@
     &--card {
       margin-top: 10%;
       font-family: $roboto;
-      @include divAnimation;
+      @include divAnimation(3);
       &-title {
         font-size: larger;
         margin-bottom: 2%;
@@ -31,7 +31,8 @@
           $borderRadiusMenu,
           $color-background,
           2em,
-          $animDure
+          $animDure,
+          3
         );
         &-title {
           font-weight: bold;
@@ -69,7 +70,7 @@
     }
   }
   @media all and (min-width: 768px) {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -101,8 +102,17 @@
         }
       }
       &--card {
+        @include divAnimation(3);
         &-menu {
           padding: 2%;
+        }
+        &-animation {
+          @include animation(
+            $color-background,
+            $color-tertiary,
+            $absolute,
+            $animDure
+          );
         }
       }
     }

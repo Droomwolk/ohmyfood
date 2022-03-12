@@ -527,19 +527,19 @@ a {
   margin-top: 10%;
   font-family: "Roboto", sans-serif;
 }
-.menu1__main--card .menu__main--card-menu:nth-child(1) {
+.menu1__main--card .menu1__main--card-menu:nth-child(1) {
   animation-delay: 250ms;
 }
-.menu1__main--card .menu__main--card-menu:nth-child(2) {
+.menu1__main--card .menu1__main--card-menu:nth-child(2) {
   animation-delay: 500ms;
 }
-.menu1__main--card .menu__main--card-menu:nth-child(3) {
+.menu1__main--card .menu1__main--card-menu:nth-child(3) {
   animation-delay: 750ms;
 }
-.menu1__main--card .menu__main--card-menu:nth-child(4) {
+.menu1__main--card .menu1__main--card-menu:nth-child(4) {
   animation-delay: 1000ms;
 }
-.menu1__main--card .menu__main--card-menu:nth-child(5) {
+.menu1__main--card .menu1__main--card-menu:nth-child(5) {
   animation-delay: 1250ms;
 }
 .menu1__main--card-title {
@@ -567,22 +567,22 @@ a {
   position: relative;
   cursor: pointer;
 }
-.menu1__main--card-menu:hover .menu__main--card-menu-subtitle, .menu1__main--card-menu:active .menu__main--card-menu-subtitle {
+.menu1__main--card-menu:hover .menu1__main--card-menu-subtitle, .menu1__main--card-menu:active .menu1__main--card-menu-subtitle {
   white-space: nowrap;
   overflow: hidden;
 }
-.menu1__main--card-menu:hover .menu__main--card-menu-subtitle-text, .menu1__main--card-menu:active .menu__main--card-menu-subtitle-text {
+.menu1__main--card-menu:hover .menu1__main--card-menu-subtitle-text, .menu1__main--card-menu:active .menu1__main--card-menu-subtitle-text {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu1__main--card-menu:hover .menu__main--card-menu-subtitle-prix, .menu1__main--card-menu:active .menu__main--card-menu-subtitle-prix {
+.menu1__main--card-menu:hover .menu1__main--card-menu-subtitle-prix, .menu1__main--card-menu:active .menu1__main--card-menu-subtitle-prix {
   margin-right: 30px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu1__main--card-menu:hover .menu__main--card-menu-animation, .menu1__main--card-menu:active .menu__main--card-menu-animation {
+.menu1__main--card-menu:hover .menu1__main--card-menu-animation, .menu1__main--card-menu:active .menu1__main--card-menu-animation {
   transform: translateX(-100%);
 }
 .menu1__main--card-menu:hover .fa-check-circle, .menu1__main--card-menu:active .fa-check-circle {
@@ -636,7 +636,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .menu1 {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -669,8 +669,39 @@ a {
     left: 29em;
     bottom: 3.7em;
   }
+  .menu1__main--card .menu1__main--card-menu:nth-child(1) {
+    animation-delay: 250ms;
+  }
+  .menu1__main--card .menu1__main--card-menu:nth-child(2) {
+    animation-delay: 500ms;
+  }
+  .menu1__main--card .menu1__main--card-menu:nth-child(3) {
+    animation-delay: 750ms;
+  }
+  .menu1__main--card .menu1__main--card-menu:nth-child(4) {
+    animation-delay: 1000ms;
+  }
+  .menu1__main--card .menu1__main--card-menu:nth-child(5) {
+    animation-delay: 1250ms;
+  }
   .menu1__main--card-menu {
     padding: 2%;
+  }
+  .menu1__main--card-animation {
+    color: #f6f6f6;
+    background-color: #99e2d0;
+    width: 60px;
+    text-align: center;
+    padding-top: 24px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin-right: -60px;
+    transition: transform 1000ms ease-in-out;
   }
 }
 
@@ -710,19 +741,19 @@ a {
   margin-top: 10%;
   font-family: "Roboto", sans-serif;
 }
-.menu3__main--card .menu__main--card-menu:nth-child(1) {
+.menu3__main--card .menu3__main--card-menu:nth-child(1) {
   animation-delay: 250ms;
 }
-.menu3__main--card .menu__main--card-menu:nth-child(2) {
+.menu3__main--card .menu3__main--card-menu:nth-child(2) {
   animation-delay: 500ms;
 }
-.menu3__main--card .menu__main--card-menu:nth-child(3) {
+.menu3__main--card .menu3__main--card-menu:nth-child(3) {
   animation-delay: 750ms;
 }
-.menu3__main--card .menu__main--card-menu:nth-child(4) {
+.menu3__main--card .menu3__main--card-menu:nth-child(4) {
   animation-delay: 1000ms;
 }
-.menu3__main--card .menu__main--card-menu:nth-child(5) {
+.menu3__main--card .menu3__main--card-menu:nth-child(5) {
   animation-delay: 1250ms;
 }
 .menu3__main--card-title {
@@ -750,22 +781,22 @@ a {
   position: relative;
   cursor: pointer;
 }
-.menu3__main--card-menu:hover .menu__main--card-menu-subtitle, .menu3__main--card-menu:active .menu__main--card-menu-subtitle {
+.menu3__main--card-menu:hover .menu3__main--card-menu-subtitle, .menu3__main--card-menu:active .menu3__main--card-menu-subtitle {
   white-space: nowrap;
   overflow: hidden;
 }
-.menu3__main--card-menu:hover .menu__main--card-menu-subtitle-text, .menu3__main--card-menu:active .menu__main--card-menu-subtitle-text {
+.menu3__main--card-menu:hover .menu3__main--card-menu-subtitle-text, .menu3__main--card-menu:active .menu3__main--card-menu-subtitle-text {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu3__main--card-menu:hover .menu__main--card-menu-subtitle-prix, .menu3__main--card-menu:active .menu__main--card-menu-subtitle-prix {
+.menu3__main--card-menu:hover .menu3__main--card-menu-subtitle-prix, .menu3__main--card-menu:active .menu3__main--card-menu-subtitle-prix {
   margin-right: 30px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu3__main--card-menu:hover .menu__main--card-menu-animation, .menu3__main--card-menu:active .menu__main--card-menu-animation {
+.menu3__main--card-menu:hover .menu3__main--card-menu-animation, .menu3__main--card-menu:active .menu3__main--card-menu-animation {
   transform: translateX(-100%);
 }
 .menu3__main--card-menu:hover .fa-check-circle, .menu3__main--card-menu:active .fa-check-circle {
@@ -818,7 +849,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .menu3 {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -851,8 +882,39 @@ a {
     left: 29em;
     bottom: 3.7em;
   }
+  .menu3__main--card .menu3__main--card-menu:nth-child(1) {
+    animation-delay: 250ms;
+  }
+  .menu3__main--card .menu3__main--card-menu:nth-child(2) {
+    animation-delay: 500ms;
+  }
+  .menu3__main--card .menu3__main--card-menu:nth-child(3) {
+    animation-delay: 750ms;
+  }
+  .menu3__main--card .menu3__main--card-menu:nth-child(4) {
+    animation-delay: 1000ms;
+  }
+  .menu3__main--card .menu3__main--card-menu:nth-child(5) {
+    animation-delay: 1250ms;
+  }
   .menu3__main--card-menu {
     padding: 2%;
+  }
+  .menu3__main--card-animation {
+    color: #f6f6f6;
+    background-color: #99e2d0;
+    width: 60px;
+    text-align: center;
+    padding-top: 24px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin-right: -60px;
+    transition: transform 1000ms ease-in-out;
   }
 }
 
@@ -891,6 +953,21 @@ a {
 .menu__main--card {
   margin-top: 10%;
   font-family: "Roboto", sans-serif;
+}
+.menu__main--card .menu__main--card-menu:nth-child(1) {
+  animation-delay: 250ms;
+}
+.menu__main--card .menu__main--card-menu:nth-child(2) {
+  animation-delay: 500ms;
+}
+.menu__main--card .menu__main--card-menu:nth-child(3) {
+  animation-delay: 750ms;
+}
+.menu__main--card .menu__main--card-menu:nth-child(4) {
+  animation-delay: 1000ms;
+}
+.menu__main--card .menu__main--card-menu:nth-child(5) {
+  animation-delay: 1250ms;
 }
 .menu__main--card-title {
   font-size: larger;
@@ -986,7 +1063,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .menu {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -1019,15 +1096,46 @@ a {
     left: 29em;
     bottom: 3.7em;
   }
+  .menu__main--card .menu__main--card-menu:nth-child(1) {
+    animation-delay: 250ms;
+  }
+  .menu__main--card .menu__main--card-menu:nth-child(2) {
+    animation-delay: 500ms;
+  }
+  .menu__main--card .menu__main--card-menu:nth-child(3) {
+    animation-delay: 750ms;
+  }
+  .menu__main--card .menu__main--card-menu:nth-child(4) {
+    animation-delay: 1000ms;
+  }
+  .menu__main--card .menu__main--card-menu:nth-child(5) {
+    animation-delay: 1250ms;
+  }
   .menu__main--card-menu {
     padding: 2%;
+  }
+  .menu__main--card-animation {
+    color: #f6f6f6;
+    background-color: #99e2d0;
+    width: 60px;
+    text-align: center;
+    padding-top: 24px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin-right: -60px;
+    transition: transform 1000ms ease-in-out;
   }
 }
 
 .menu2 {
   position: relative;
   width: 100%;
-  height: 43vh;
+  height: 44vh;
   margin-bottom: 73em;
 }
 .menu2__figure--img {
@@ -1058,6 +1166,22 @@ a {
 }
 .menu2__main--card {
   margin-top: 10%;
+  font-family: "Roboto", sans-serif;
+}
+.menu2__main--card .menu2__main--card-menu:nth-child(1) {
+  animation-delay: 250ms;
+}
+.menu2__main--card .menu2__main--card-menu:nth-child(2) {
+  animation-delay: 500ms;
+}
+.menu2__main--card .menu2__main--card-menu:nth-child(3) {
+  animation-delay: 750ms;
+}
+.menu2__main--card .menu2__main--card-menu:nth-child(4) {
+  animation-delay: 1000ms;
+}
+.menu2__main--card .menu2__main--card-menu:nth-child(5) {
+  animation-delay: 1250ms;
 }
 .menu2__main--card-title {
   font-size: larger;
@@ -1084,22 +1208,22 @@ a {
   position: relative;
   cursor: pointer;
 }
-.menu2__main--card-menu:hover .menu__main--card-menu-subtitle, .menu2__main--card-menu:active .menu__main--card-menu-subtitle {
+.menu2__main--card-menu:hover .menu2__main--card-menu-subtitle, .menu2__main--card-menu:active .menu2__main--card-menu-subtitle {
   white-space: nowrap;
   overflow: hidden;
 }
-.menu2__main--card-menu:hover .menu__main--card-menu-subtitle-text, .menu2__main--card-menu:active .menu__main--card-menu-subtitle-text {
+.menu2__main--card-menu:hover .menu2__main--card-menu-subtitle-text, .menu2__main--card-menu:active .menu2__main--card-menu-subtitle-text {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu2__main--card-menu:hover .menu__main--card-menu-subtitle-prix, .menu2__main--card-menu:active .menu__main--card-menu-subtitle-prix {
+.menu2__main--card-menu:hover .menu2__main--card-menu-subtitle-prix, .menu2__main--card-menu:active .menu2__main--card-menu-subtitle-prix {
   margin-right: 30px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu2__main--card-menu:hover .menu__main--card-menu-animation, .menu2__main--card-menu:active .menu__main--card-menu-animation {
+.menu2__main--card-menu:hover .menu2__main--card-menu-animation, .menu2__main--card-menu:active .menu2__main--card-menu-animation {
   transform: translateX(-100%);
 }
 .menu2__main--card-menu:hover .fa-check-circle, .menu2__main--card-menu:active .fa-check-circle {
@@ -1152,7 +1276,7 @@ a {
 }
 @media all and (min-width: 768px) {
   .menu2 {
-    height: 5vh;
+    height: 6vh;
     width: 100%;
     top: 4em;
     display: flex;
@@ -1185,8 +1309,39 @@ a {
     left: 29em;
     bottom: 3.7em;
   }
+  .menu2__main--card .menu2__main--card-menu:nth-child(1) {
+    animation-delay: 250ms;
+  }
+  .menu2__main--card .menu2__main--card-menu:nth-child(2) {
+    animation-delay: 500ms;
+  }
+  .menu2__main--card .menu2__main--card-menu:nth-child(3) {
+    animation-delay: 750ms;
+  }
+  .menu2__main--card .menu2__main--card-menu:nth-child(4) {
+    animation-delay: 1000ms;
+  }
+  .menu2__main--card .menu2__main--card-menu:nth-child(5) {
+    animation-delay: 1250ms;
+  }
   .menu2__main--card-menu {
     padding: 2%;
+  }
+  .menu2__main--card-animation {
+    color: #f6f6f6;
+    background-color: #99e2d0;
+    width: 60px;
+    text-align: center;
+    padding-top: 24px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    margin-right: -60px;
+    transition: transform 1000ms ease-in-out;
   }
 }
 
