@@ -114,16 +114,12 @@
           border-radius: 1em 1em 0 0;
           object-fit: cover;
         }
-        &-image {
-          width: 100%;
-          object-fit: cover;
-          overflow: hidden;
-        }
         &-description {
           padding: 2% 3%;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          position: relative;
           &-titre {
             font-weight: bold;
             margin-bottom: 0.4em;
@@ -133,15 +129,21 @@
             color: black;
             font-style: normal;
           }
+          &-icone {
+            position: absolute;
+            right: 0;
+            bottom: 4.5em;
+          }
         }
         &-nouveau {
           border: 0.1em solid none;
           background-color: $color-tertiary;
           color: green;
-          padding: 1.5%;
+          padding: 10px;
           position: absolute;
-          top: 1em;
-          left: 17.5em;
+          bottom: 13em;
+          // left: 16.5em;
+          right: 10px;
         }
       }
     }
@@ -153,16 +155,33 @@
         &-card {
           margin-right: 1em;
           &-nouveau {
-            left: 14em;
+            // left: 14em;
+            right: 5px;
           }
         }
       }
     }
   }
+  @media all and (min-width: 768px) and (max-width: 1000px) {
+    &__restaurant {
+      background-color: blue;
+      &--section {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    // &--section {
+    //   background-color: chartreuse;
+    //   display: flex;
+    //   &-card {
+    //     background-color: chartreuse;
+    //   }
+    // }
+  }
 }
 
 .fa-heart {
-  color: white;
+  color: black;
 }
 
 .fa-heart:hover {

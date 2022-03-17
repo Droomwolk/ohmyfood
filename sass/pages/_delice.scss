@@ -50,6 +50,7 @@
           @include animation(
             $color-background,
             $color-tertiary,
+            24px,
             $absolute,
             $animDure
           );
@@ -110,11 +111,15 @@
           @include animation(
             $color-background,
             $color-tertiary,
+            30px,
             $absolute,
             $animDure
           );
         }
       }
     }
+  }
+  @media all and (min-width: 768px) and (max-width: 1000px) {
+    @include menu($relative, 100%, 5vh, 105.9em);
   }
 }

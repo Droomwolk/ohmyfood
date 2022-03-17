@@ -49,6 +49,7 @@
           @include animation(
             $color-background,
             $color-tertiary,
+            24px,
             $absolute,
             $animDure
           );
@@ -105,14 +106,30 @@
         @include divAnimation(2);
         &-menu {
           padding: 2%;
+          &-animation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include animation(
+              $color-background,
+              $color-tertiary,
+              null,
+              $absolute,
+              $animDure
+            );
+          }
         }
-        &-animation {
-          @include animation(
-            $color-background,
-            $color-tertiary,
-            $absolute,
-            $animDure
-          );
+      }
+    }
+  }
+  @media all and (min-width: 768px) and (max-width: 1000px) {
+    @include menu($relative, 100%, 5vh, 105.7em);
+    &__main {
+      &--title {
+        &-icones {
+          position: relative;
+          left: 250px;
+          bottom: 55px;
         }
       }
     }

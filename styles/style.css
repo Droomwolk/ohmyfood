@@ -116,7 +116,7 @@
   opacity: 0;
   z-index: 1;
   top: 38px;
-  right: 25px;
+  right: 27px;
   background: radial-gradient(#9356dc, #ff79da);
 }
 .like__bg::before {
@@ -255,6 +255,12 @@
   .header__logo {
     height: 4em;
     margin-right: 30em;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .header__logo {
+    height: 4em;
+    margin-right: 18em;
   }
 }
 
@@ -434,16 +440,12 @@ li {
   border-radius: 1em 1em 0 0;
   object-fit: cover;
 }
-.accueil__restaurant--section-card-image {
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-}
 .accueil__restaurant--section-card-description {
   padding: 2% 3%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .accueil__restaurant--section-card-description-titre {
   font-weight: bold;
@@ -454,14 +456,19 @@ li {
   color: black;
   font-style: normal;
 }
+.accueil__restaurant--section-card-description-icone {
+  position: absolute;
+  right: 0;
+  bottom: 4.5em;
+}
 .accueil__restaurant--section-card-nouveau {
   border: 0.1em solid none;
   background-color: #99e2d0;
   color: green;
-  padding: 1.5%;
+  padding: 10px;
   position: absolute;
-  top: 1em;
-  left: 17.5em;
+  bottom: 13em;
+  right: 10px;
 }
 @media all and (min-width: 768px) {
   .accueil__restaurant {
@@ -475,12 +482,21 @@ li {
     margin-right: 1em;
   }
   .accueil__restaurant--section-card-nouveau {
-    left: 14em;
+    right: 5px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .accueil__restaurant {
+    background-color: blue;
+  }
+  .accueil__restaurant--section {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .fa-heart {
-  color: white;
+  color: black;
 }
 
 .fa-heart:hover {
@@ -612,7 +628,7 @@ a {
   text-align: center;
   padding-top: 24px;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   position: absolute;
   right: 0;
   top: 0;
@@ -692,9 +708,9 @@ a {
     background-color: #99e2d0;
     width: 60px;
     text-align: center;
-    padding-top: 24px;
+    padding-top: 30px;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 15px;
     position: absolute;
     right: 0;
     top: 0;
@@ -702,6 +718,14 @@ a {
     opacity: 1;
     margin-right: -60px;
     transition: transform 1000ms ease-in-out;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .menu1 {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 105.9em;
   }
 }
 
@@ -826,7 +850,7 @@ a {
   text-align: center;
   padding-top: 24px;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   position: absolute;
   right: 0;
   top: 0;
@@ -905,9 +929,9 @@ a {
     background-color: #99e2d0;
     width: 60px;
     text-align: center;
-    padding-top: 24px;
+    padding-top: 30px;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 15px;
     position: absolute;
     right: 0;
     top: 0;
@@ -915,6 +939,14 @@ a {
     opacity: 1;
     margin-right: -60px;
     transition: transform 1000ms ease-in-out;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .menu3 {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 105.9em;
   }
 }
 
@@ -1039,7 +1071,7 @@ a {
   text-align: center;
   padding-top: 24px;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   position: absolute;
   right: 0;
   top: 0;
@@ -1119,9 +1151,9 @@ a {
     background-color: #99e2d0;
     width: 60px;
     text-align: center;
-    padding-top: 24px;
+    padding-top: 30px;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 15px;
     position: absolute;
     right: 0;
     top: 0;
@@ -1129,6 +1161,14 @@ a {
     opacity: 1;
     margin-right: -60px;
     transition: transform 1000ms ease-in-out;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .menu {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 111.8em;
   }
 }
 
@@ -1252,7 +1292,7 @@ a {
   text-align: center;
   padding-top: 24px;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   position: absolute;
   right: 0;
   top: 0;
@@ -1327,14 +1367,16 @@ a {
   .menu2__main--card-menu {
     padding: 2%;
   }
-  .menu2__main--card-animation {
+  .menu2__main--card-menu-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #f6f6f6;
     background-color: #99e2d0;
     width: 60px;
     text-align: center;
-    padding-top: 24px;
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 15px;
     position: absolute;
     right: 0;
     top: 0;
@@ -1342,6 +1384,19 @@ a {
     opacity: 1;
     margin-right: -60px;
     transition: transform 1000ms ease-in-out;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1000px) {
+  .menu2 {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 105.7em;
+  }
+  .menu2__main--title-icones {
+    position: relative;
+    left: 250px;
+    bottom: 55px;
   }
 }
 

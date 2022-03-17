@@ -73,18 +73,22 @@
     }
     .fa-check-circle {
       animation: check-round 600ms 400ms;
+      // position: absolute;
+      // top: 40px;
+      // right: 20px;
     }
   }
 }
 
-@mixin animation($color, $background, $position, $dure) {
+@mixin animation($color, $background, $top, $position, $dure) {
   color: $color;
   background-color: $background;
   width: 60px;
   text-align: center;
-  padding-top: 24px;
+  // padding-top: 24px;
+  padding-top: $top;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   position: $position;
   right: 0;
   top: 0;
@@ -110,6 +114,8 @@
   transition: margin-right $dure ease-in-out;
 }
 
+//ANIMATION SPINNER
+
 @mixin circle($position, $top, $left, $width, $height, $borderRadius) {
   position: $position;
   top: $top;
@@ -119,7 +125,7 @@
   border-radius: $borderRadius;
 }
 
-//Apparition
+//ANIMATION Apparition
 @mixin divAnimation($name) {
   @for $i from 1 through 5 {
     & .menu#{$name}__main--card-menu:nth-child(#{$i}) {
