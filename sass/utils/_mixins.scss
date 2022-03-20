@@ -133,3 +133,28 @@
     }
   }
 }
+
+//MEDIA-QUERY
+@mixin mobile-s {
+  @media screen and (max-width: map-get($breakpoints, mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  @media screen and (max-width: map-get($breakpoints, mobile-s)) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media screen and (max-width: map-get($breakpoints, mobile-s)) {
+    @content;
+  }
+}
+
+@mixin tablette {
+  @media screen and (max-width: map-get($breakpoints, mobile-s)) {
+    @content;
+  }
+}

@@ -17,3 +17,11 @@ $animDure: 1000ms;
 //Fonts
 $roboto: "Roboto", sans-serif;
 $shrikhand: "Shrikhand", cursive;
+
+//Breakpoints
+$breakpoints: (
+  mobile-s: 320px,
+  mobile-m: 375px,
+  mobile-l: 425px,
+  tablette: 768px,
+);

@@ -71,16 +71,14 @@
     }
   }
   @media all and (min-width: 768px) {
-    height: 6vh;
     width: 100%;
-    top: 4em;
+    flex: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 123.5em;
+    margin-bottom: 0;
     &__figure {
-      height: 20vh;
+      height: 20em;
       width: 100%;
       &--img {
         height: 20em;
@@ -91,6 +89,10 @@
     }
     &__main {
       width: 60%;
+      position: static;
+      z-index: 0;
+      top: 0;
+      border-radius: 0 0 0 0;
       &--title {
         display: flex;
         justify-content: center;
@@ -98,12 +100,12 @@
         flex-direction: column;
         &-icones {
           position: relative;
-          left: 29em;
+          left: 16em;
           bottom: 3.7em;
         }
       }
       &--card {
-        @include divAnimation(3);
+        @include divAnimation(1);
         &-menu {
           padding: 2%;
         }
@@ -119,7 +121,71 @@
       }
     }
   }
-  @media all and (min-width: 768px) and (max-width: 1000px) {
-    @include menu($relative, 100%, 5vh, 105.9em);
+
+  @media all and (min-width: 400px) and (max-width: 767px) {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    &__figure {
+      height: 20em;
+      width: 100%;
+      &--img {
+        height: 20em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__main {
+      // width: 60%;
+      position: static;
+      z-index: 0;
+      top: 0;
+      border-radius: 0 0 0 0;
+      &--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-icones {
+          position: relative;
+          left: 13.5em;
+          bottom: 3.7em;
+        }
+      }
+      &--card {
+        @include divAnimation(1);
+        &-menu {
+          padding: 2%;
+        }
+        &-animation {
+          @include animation(
+            $color-background,
+            $color-tertiary,
+            30px,
+            $absolute,
+            $animDure
+          );
+        }
+      }
+    }
   }
+  // @media all and (min-width: 768px) and (max-width: 1000px) {
+  //   @include menu($relative, 100%, 5vh, 101.8em);
+  //   &__main {
+  //     &--title {
+  //       &-icones {
+  //         position: relative;
+  //         left: 250px;
+  //         bottom: 55px;
+  //       }
+  //     }
+  //   }
+  // }
+  // @include mobile-s {
+  //   @include menu($relative, 100%, 5vh, 92em);
+  // }
 }
